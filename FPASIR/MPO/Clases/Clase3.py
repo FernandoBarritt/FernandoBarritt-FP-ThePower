@@ -20,3 +20,5 @@ frase = "Me encanta Java"
 print("Python" in frase) #False
 nueva_frase = "Me encanta Python"
 print("Python" in nueva_frase) #True
+
+#fin de Clase3 de 17:00 a 18:00
