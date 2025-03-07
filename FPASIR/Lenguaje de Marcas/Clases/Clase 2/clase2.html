@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lionen Messi, Leyenda Viva </title>
+    <meta description="Lionel Messi, el mejor jugador de futbol de la historia">
+    <meta keywords="Lionel Messi, Messi, Barcelona, Futbol, Leyenda">
+    <meta author="Fernando Barritt">
+</head>
+<body>
+    <header>
+        <h1>Lionel Messi, Leyenda Viva</h1>
+        <nav>
+            <ul><!--Lista Desordenada-->
+                <li> <a href="#biografía">Biografía</a></li>
+                <li> <a href="#equipos">Equipos</a></li>
+                <li> <a href="#logros">Logros</a></li>
+                <li> <a href="#estadísticas">Estadísticas</a></li>
+                <li> <a href="#galería">Galería</a></li>
+                <li> <a href="#vídeos">Vídeos</a></li>
+                <li> <a href="audios">Audios</a></li>
+                <li> <a href="contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Sección Biografía-->
+    <section id="biografía">
+        <h2>Biografía</h2>    <!--subtítulo de la sección-->
+        <p> Lionel Messi es el mejor jugador de fútbol de la historia, sin ninguna duda</p>
+        <blockquote> "No puedo, tengo furbo" Lionel Messi, 2025</blockquote>
+    </section>
+
+    <section id="equipos">
+        <h2>Equipos</h2>
+            <ul>
+                 <li>Barcelona</li>
+                 <li>Paris Saint Germain</li>
+                 <li>Inter Miami</li>
+                 <li>Selección Argentina</li>
+            </ul>
+    </section>
+
+    <section id="logros">
+        <h2>Logros</h2>
+            <table border="3">
+                <tr>
+                    <th>Año</th>
+                    <th>Título</th>
+                    <th>Equipo</th>
+                </tr>
+                <tr>
+                    <th>2009</th>
+                    <th>Balón de Oro</th>
+                    <th>FC Barcelona</th>
+                </tr>
+            
+            </table>
+    </section>
+
+    <section id="estadísticas">
+        <h2>Estadísticas</h2>
+        <ul>
+            <li>Partidos Jugados: 1000</li>
+            <li>Goles: 800</li>
+            <li>Asistencias: 500</li>
+        </ul>
+    </section>  
+
+    <section id="galería">
+        <h2>Galería</h2>
+        <figure>
+            <img src= "Imágenes/Messi.jpg" alt="Lionel Messi en la cúspide de su carrera">
+            
+        </figure>
+    </section>
+
+    <section id="vídeos">
+        <h2>Vídeos</h2>
+        <p>Avisamos que el volumen de los vídeos está muy alto, por favor bajar el volumen antes de reproducirlos.</p>
+        <video width="900" height="600" controls>
+            <source src="Vídeos/Messi contando chistes.mp4" type="video/mp4">
+        </video>
+        <video width="900" height="500" controls>
+            <source src="Vídeos/Messientrevista.mp4" type="video/mp4">
+        </video>
+    </section>
+
+    <section id="audios">
+        <h2>Audios</h2>
+        <audio controls>
+            <source src="Audios/quemirabobo.mp3" type="audio/mp3">
+        </audio>
+
+    </section>
+
+<!--DEBERES
+Usar las etiquetas:
+ * formulario (form)
+ * label
+ * input
+ * required
+ * br
+ * textarea
+ * input type submit
+ * input type reset
+ * 2 botones (button1 y button2 que digan enviar y reiniciar"
+ -->
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form action="procesar.php" method="post">
+           
+            <label for="nombre"> Nombre</label>
+            <input type="text" size="30" id="nombre" name="nombre" required><br><br>
+            
+            <label for="Correo Electrónico"> Correo Electrónico</label>
+            <input type="email" id="correo" name="correo" required><br><br>
+
+            <label for="Mensaje"> Mensaje para el autor</label><br>
+            <textarea id="Mensaje" name="mensaje" rows="5" cols="38" required></textarea><br><br>
+
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar">
+        
+        </form>
+    </section>
+<footer>
+    <p>&copy; 2025-Página sobre Lionel Messi. No oficial.</p>
+    <button onclick="alert('Gracias por visitar la página')">Agradecimientos</button>
+</footer>
+
+</body>
+</html>
