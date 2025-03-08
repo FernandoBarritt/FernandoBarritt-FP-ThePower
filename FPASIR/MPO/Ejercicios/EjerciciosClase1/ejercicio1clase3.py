@@ -5,7 +5,7 @@ import random
 print("A continuación, introduzca primero su nombre y luego sus apellidos: ")
 nombre_de_usuario = input("Nombre: ")
 apellido_de_usuario = input("Apellidos: ")
-    #2 Genera un nombre de usuario en minúsculas, sin espacios. (Y eliminar posibles espacios del usuario)
+    #2 Genera un nombre de usuario en minúsculas, sin espacios.
 usuario_generado = (nombre_de_usuario.lower() + apellido_de_usuario.lower()).replace(" ", "")
     #3 Añade un número aleatorio al final.
 usuario_generado += str(random.randint(1,999))
