@@ -10,7 +10,7 @@ nombre_de_producto = nombre_de_producto.upper()
 print("El precio del producto, con dos decimales, es: ", format(precio_del_producto, ".2f"))
     #Genera un código basado en el valor ASCII de la primera letra del producto.
 primera_letra = nombre_de_producto[0]
-codigo_ASCII = ord(primera_letra) + random.randint(1,999)
-print("El código basado en el valor ASCII de la primera letra del producto es: ", codigo_ASCII)
+codigo_ASCII = ord(primera_letra) + random.randint(100000000,5000000000)
+print("El código basado en el valor ASCII de la primera letra del producto es:",codigo_ASCII)
 
 
