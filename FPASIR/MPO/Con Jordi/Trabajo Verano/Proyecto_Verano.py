@@ -121,7 +121,8 @@ def menu():
     while True:
         print("### MENU ###")
         print("1. Empezar Cuestionario")
-        print("2. Salir")
+        print("2. Ranking")
+        print("3. Salir")
         try:
             seleccion_menu = int(input("Seleccione una de las opciones del menú indicando su número: "))
         except ValueError:
@@ -132,6 +133,10 @@ def menu():
             nombre_usuario = pedir_nombre_usuario()  # Guardo nombre antes de empezar para el ranking
             empezar_cuestionario(nombre_usuario)
         elif seleccion_menu == 2:
+            with open("ranking.txt", "r") as ranking_archivo:
+                ranking_archivo = ranking_archivo.read()
+                print(ranking_archivo)
+        elif seleccion_menu == 3:
             print("Saliendo del programa...")
             break
         else:
