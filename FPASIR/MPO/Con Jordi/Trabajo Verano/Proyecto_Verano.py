@@ -95,7 +95,7 @@ def resultados_finales():
 # Guarda en archivo el nombre y la puntuación final
 def guardar_resultado(nombre, aciertos, total):
     with open("ranking.txt", "a") as f:
-        f.write(f"{nombre},{aciertos}/{total}\n")
+        f.write(f"{nombre}, {aciertos}/{total}\n")
 
 
 # --- SECCIÓN 3: LÓGICA PRINCIPAL DEL CUESTIONARIO ---
@@ -128,14 +128,27 @@ def menu():
         except ValueError:
             print("Entrada no válida. Solo se aceptan números")
             continue  # Si da error, vuelve a mostrar el menú
-
+    #Funcionalidad de las opciones del menú
         if seleccion_menu == 1:
             nombre_usuario = pedir_nombre_usuario()  # Guardo nombre antes de empezar para el ranking
             empezar_cuestionario(nombre_usuario)
         elif seleccion_menu == 2:
-            with open("ranking.txt", "r") as ranking_archivo:
-                ranking_archivo = ranking_archivo.read()
-                print(ranking_archivo)
+            try:
+                with open("ranking.txt", "r") as ranking_archivo:
+                    ranking_archivo = ranking_archivo.read()
+                    #Si el archivo está vacío o solo hay espacios
+                    if not ranking_archivo.strip():
+                        print("El archivo está vacío. ¡Juega para añadir el primer resultado! \n")
+                    else:
+                        print("### RANKING HISTÓRICO ###")
+                        print(ranking_archivo)
+            #Si no existe el archivo
+            except FileNotFoundError:
+                print("El ranking no se ha creado todavía. Juegue para inicializar el ranking")
+
+
+
+
         elif seleccion_menu == 3:
             print("Saliendo del programa...")
             break
