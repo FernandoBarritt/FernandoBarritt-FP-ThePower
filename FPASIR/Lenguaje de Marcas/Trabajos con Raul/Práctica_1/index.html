@@ -14,8 +14,9 @@
 <body>
     <header id = "header">
         <h1>Fernando Barritt Haines</h1>
+        <button id="nav-toggle" aria-controls="nav-principal" aria-expanded="false" aria-label="Abrir menú">☰</button>
     </header>
-    <nav>
+    <nav id = "nav-principal" role="navigation">
         <ul>
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#proyectos">Proyectos</a></li>
@@ -47,17 +48,17 @@
             <h2>Proyectos</h2>
             <div class = "grid-proyectos">
                 <a href="https://github.com/FernandoBarritt/FernandoBarritt-FP-ThePower/blob/master/FPASIR/MPO/Con%20Jordi/Trabajo%20Verano/Proyecto_Verano.py"
-                class="tarjeta-proyecto" target="_blank">
+                class="tarjeta-proyecto" target="_blank" rel="noopener noreferrer">
                     <img src="./styles/images/Quiz_Python.png" alt="Captura del cuestionario de Python">
                     <h3>Cuestionario en Python</h3>
                 </a>
 
-                <a href="https://github.com/FernandoBarritt/Personal_Proyects.git" class="tarjeta-proyecto" target="_blank">
+                <a href="https://github.com/FernandoBarritt/Personal_Proyects.git" class="tarjeta-proyecto" target="_blank" rel="noopener noreferrer">
                     <img src="./styles/images/Buscador_Python_logo.png" alt="Buscador de archivos elaborado en python">
                     <h3>Buscador de archivos veloz en local</h3>
                 </a>
 
-                <a href="#" class="tarjeta-proyecto" target="_blank">
+                <a href="#" class="tarjeta-proyecto" target="_blank" rel="noopener noreferrer">
                     <img src="./styles/images/en_progreso_logo.png" alt="Proyecto en progreso">
                     <h3>Proyecto todavía en progreso</h3>
                 </a>
@@ -74,41 +75,45 @@
             <h3>Educación</h3>
 
                 <table>
-                    <tr>
-                        <th>Estudio</th>
-                        <th>Lugar</th>
-                        <th>Años</th>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th>Estudio</th>
+                            <th>Lugar</th>
+                            <th>Años</th>
+                        </tr>
+                    </thead>
 
-                    <tr>
-                        <td>Bachillerato de Ciencias</td>
-                        <td>I.E.S Rodríguez Marín</td>
-                        <td>2017-2019</td>
-                    </tr>
+                    <tbody>
+                        <tr>
+                            <td>Bachillerato de Ciencias</td>
+                            <td>I.E.S Rodríguez Marín</td>
+                            <td>2017-2019</td>
+                        </tr>
 
-                    <tr>
-                        <td>Grado Universitario en Historia</td>
-                        <td>Universidad Complutense de Madrid</td>
-                        <td>2019-2023</td>
-                    </tr>
+                        <tr>
+                            <td>Grado Universitario en Historia</td>
+                            <td>Universidad Complutense de Madrid</td>
+                            <td>2019-2023</td>
+                        </tr>
 
-                    <tr>
-                        <td>Google Cybersecurty Certificate</td>
-                        <td>Online</td>
-                        <td>2024</td>
-                    </tr>
+                        <tr>
+                            <td>Google Cybersecurty Certificate</td>
+                            <td>Online</td>
+                            <td>2024</td>
+                        </tr>
 
-                    <tr>
-                        <td>Grado Superior en ASIR</td>
-                        <td>ThePower Education</td>
-                        <td>2025-2027</td>
-                    </tr>
+                        <tr>
+                            <td>Grado Superior en ASIR</td>
+                            <td>ThePower Education</td>
+                            <td>2025-2027</td>
+                        </tr>
 
-                    <tr>
-                        <td>Máster en Ciberseguridad</td>
-                        <td>ThePower Education - Prometeo</td>
-                        <td>2025-2027</td>
-                    </tr>
+                        <tr>
+                            <td>Máster en Ciberseguridad</td>
+                            <td>ThePower Education - Prometeo</td>
+                            <td>2025-2027</td>
+                        </tr>
+                    </tbody>
                 </table>
             
             <h3>Habilidades Técnicas</h3>
@@ -178,11 +183,19 @@
 
             <ul>
                 <li>Correo electrónico: fernandobarrittcontact@gmail.com</li>
-                <li><a href="https://www.linkedin.com/in/fernando-barritt-haines-ab8499183/">LinkedIn</a></li>
-                <li><a href="https://www.instagram.com/fernanbh/">Instagram</a></li>
+                <li><a href="https://www.linkedin.com/in/fernando-barritt-haines-ab8499183/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a href="https://www.instagram.com/fernanbh/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
             </ul>
         </section>
-        
+
     </main>
+    
+    <div id="aviso-cookies" role="dialog" aria-label="Aviso de cookies" aria-describedby="texto-cookies">
+    <p id="texto-cookies">Usamos cookies para mejorar la experiencia. <a href="privacidad.html">Política de privacidad</a>.</p>
+
+        <button id="accept-cookies">Aceptar</button>
+        <button id="deny-cookies">Rechazar</button>
+    </div>
+
 </body>
 </html>
