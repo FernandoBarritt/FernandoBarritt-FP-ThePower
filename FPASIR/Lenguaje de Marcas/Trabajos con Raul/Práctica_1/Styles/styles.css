@@ -1,0 +1,94 @@
+/* codificación UTF-8 */
+@charset "UTF-8";
+
+
+/*Reseteo de Márgenes*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*-------------------------------------------- Tipografías --------------------------------------------*/
+
+/* Poppins - ExtraLight (peso 200) */
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins/Poppins-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+}
+
+/* Poppins - Regular (peso 400) */
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+/* Poppins - Bold (peso 700) */
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+
+/* Roboto - Regular (peso 400) */
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto/static/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+/*----------------------------------------------Html-------------------------------------------------------------------*/
+
+html{
+    scroll-behavior: smooth;
+    font-size: 16px; /*Tamaño base de futuros REM*/
+}
+
+/*----------------------------------------------Root--------------------------------------------------------------------*/
+:root{
+    /*colores prinicipales*/
+    --color-fondo: rgba(232, 239, 246, 1);
+    --color-texto: rgba(72, 100, 126, 1);
+    --color-principal: rgba(128, 171, 235, 1);
+    --color-blanco: rgba(255, 255, 255, 1);
+    --color-fondo-nav: rgba(255, 255, 255, 0.58);
+
+
+/*Tipografías*/
+
+    --fuente-títulos: 'Poppins', sans-serif;
+    --fuente-texto: 'Roboto', sans-serif;
+    --altura-linea-base: 1.5;
+
+
+/*Tamaños*/
+
+--tamaño-h1: 4rem;
+--tamaño-h2: 1.5rem;
+--tamaño-nav: 0.875rem;
+--tamaño-texto: 1.5rem;
+}
+
+
+
+
+/*-------------------------------------------Body------------------------------------------------------------------------*/
+
+body{
+    background-color: var(--color-fondo);
+    font-family: var(--fuente-texto);
+    font-size: var(--tamaño-texto);
+    color: var(--color-texto);
+    line-height: 1.5;
+}
+
+h1{
+    color: var(--color-blanco);
+    font-family: var(--fuente-títulos);
+    font-size: var(--tamaño-h1);
+    font-weight: 200; /*Extra-Light*/
+    line-height: 1.5;
+}
