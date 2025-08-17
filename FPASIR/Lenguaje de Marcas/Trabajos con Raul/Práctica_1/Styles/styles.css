@@ -119,13 +119,25 @@ h3{
 
 /*---------------------------------------------Header-------------------------------------------------------------------------------------*/
 
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.05); /* Negro al 35% de opacidad */
+    z-index: -1; /* Se queda debajo del contenido */
+}
+
+
 header{
     position: relative;
     background-image: url('./images/me\ at\ kvalvika\ beach.JPG');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    min-height: 93vh;
+    min-height: 91vh;
 
     display:flex;
     flex-direction: column;
@@ -136,10 +148,35 @@ header{
 
 }
 
+/*--------------H1------------*/
+h1 {
+    white-space: nowrap;
+    position: sticky;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
+h1{
+    align-self: center;
+    margin-block-end: 6rem ;
+}
 
+/*-----Responsive----*/
 
-/*----NAV----*/
+@media (max-width:768px){
+    header {
+        min-height: 70vh;
+        padding: 2rem;
+    }
+
+    h1{
+        font-size: 3rem;
+        top: 25%;
+    }
+}
+
+/*-----------------------------------------------NAV-------------------------------------------------------------------------*/
 
 nav{
     position: sticky;
@@ -158,6 +195,20 @@ nav{
     line-height: var(--altura-linea-base);
     background-color: var(--color-texto);
 }
+
+
+nav ul{
+    
+    text-align: center;
+    display: flex;
+    justify-content:center;
+    list-style-type: none;
+    flex-direction: row;
+    gap: 6rem;
+    padding: 1rem;
+
+}
+
 
 
 nav a {
@@ -179,27 +230,66 @@ nav a:hover{
 }
 
 
-nav ul{
-    
-    text-align: center;
+
+/*-----------------------------------------------H2-------------------------------------------------------------------------*/
+h2 {
+    display: block; /* ahora es block */
+    width: max-content; /* ancho ajustado al texto */
+    margin: 2rem auto; /* centrado horizontal */
+    position: relative;
+    padding: 0;
+}
+
+/*Subrayado de H2*/
+h2::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0.15rem;
+    background-color: var(--color-principal);
+    margin-top: 0.3rem;
+}
+
+/*-----------------------------------------------Inicio-------------------------------------------------------------------------*/
+
+.contenedor-inicio {
     display: flex;
-    justify-content:center;
-    list-style-type: none;
-    flex-direction: row;
-    gap: 6rem;
+    align-items: center;
+    justify-content: center;
+    gap: 7rem;
     padding: 1rem;
-
-
-
+    flex-wrap: wrap;  /*Para apilar en pantallas pequeñas*/
 }
 
-
-/*--------------H1------------*/
-h1 {
-    white-space: nowrap;
+/*-----Imagen Orla Fernando-----*/
+.contenedor-inicio figure img {
+    width: 20rem;
+    height:20rem;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 23%;
 }
 
-h1{
-    align-self: center;
-    margin-block-end: 18rem ;
+.texto-inicio{
+    max-width: 40rem;
+    text-align: justify;
+    font-size: var(--tamaño-texto);
 }
+
+.contenedor-inicio figcaption {
+    text-align: center;
+}
+
+/*-----Responsive-----*/
+
+@media (max-width:768px) {
+    .contenedor-inicio {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .texto-inicio{
+        max-width: 90%;
+    }
+}
+
