@@ -83,6 +83,10 @@ body{
     font-size: var(--tamaño-texto);
     color: var(--color-texto);
     line-height: var(--altura-linea-base);
+
+
+    body { overflow-x: hidden; }
+
 }
 
 
@@ -150,7 +154,7 @@ header{
 
 /*--------------H1------------*/
 h1 {
-    white-space: nowrap;
+    white-space: normal;
     position: sticky;
     top: 30%;
     left: 50%;
@@ -162,7 +166,7 @@ h1{
     margin-block-end: 6rem ;
 }
 
-/*-----Responsive----*/
+/*-----Responsive----
 
 @media (max-width:768px){
     header {
@@ -175,6 +179,7 @@ h1{
         top: 25%;
     }
 }
+----------------------*/
 
 /*-----------------------------------------------NAV-------------------------------------------------------------------------*/
 
@@ -256,7 +261,7 @@ h2::after {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 7rem;
+    gap: 10rem;
     padding: 1rem;
     flex-wrap: wrap;  /*Para apilar en pantallas pequeñas*/
 }
@@ -280,7 +285,7 @@ h2::after {
     text-align: center;
 }
 
-/*-----Responsive-----*/
+/*-----Responsive-----
 
 @media (max-width:768px) {
     .contenedor-inicio {
@@ -293,3 +298,57 @@ h2::after {
     }
 }
 
+--------------------*/
+
+
+/*-----------------------------------------------Proyectos-------------------------------------------------------------------------*/
+
+
+#proyectos {
+    padding: 4rem 15rem;
+}
+
+#proyectos h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.grid-proyectos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    margin: 0 auto;
+}
+
+.tarjeta-proyecto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    background-color: var(--color-blanco);
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+    padding: 1.5rem;
+    text-decoration: none; 
+    color: inherit;        
+    transition: transform 0.7s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-proyecto:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.tarjeta-proyecto img {
+    width: 100%;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+.tarjeta-proyecto h3 {
+    font-size: 1.2rem;
+    margin-top: auto; /* empuja el título hacia abajo si la tarjeta crece */
+}
