@@ -66,10 +66,10 @@ html{
 
     /*Tamaños*/
 
-        --tamaño-h1: 4rem;
+        --tamaño-h1: 5rem;
         --tamaño-h2: 2rem;
         --tamaño-h3: 1.5rem;
-        --tamaño-nav: 0.875rem;
+        --tamaño-nav: 1.3rem;
         --tamaño-texto: 1.25rem;
 }
 
@@ -114,23 +114,92 @@ h3{
 }
 
 
-/*-------------------------------------------------------------------NAV---------------------------------------------------------------*/
 
+
+
+/*---------------------------------------------Header-------------------------------------------------------------------------------------*/
+
+header{
+    position: relative;
+    background-image: url('./images/me\ at\ kvalvika\ beach.JPG');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 93vh;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+
+}
+
+
+
+
+/*----NAV----*/
 
 nav{
+    position: sticky;
+    top: 0;
+    align-self: center;
+    width: 100%;
+    z-index: 1000;
+
+
+
+    
     color: var(--color-blanco);
     font-family: var(--fuente-títulos);
     font-size: var(--tamaño-nav);
     font-weight: 700; /*Bold*/
     line-height: var(--altura-linea-base);
-    background-color: var(--color-fondo-nav);
+    background-color: var(--color-texto);
 }
+
+
 nav a {
     outline: none;
     text-decoration: none;
-    border-radius: 0.2rem;
-    color: inherit
+    border-radius: 2rem;
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    color: inherit;
+    transition: background-color 0.5s;
+
+
 }
+
 nav a:hover{
-    box-shadow: 0 0 0 3px var(--color-principal);
+    background-color: var(--color-principal);
+}
+
+
+nav ul{
+    
+    text-align: center;
+    display: flex;
+    justify-content:center;
+    list-style-type: none;
+    flex-direction: row;
+    gap: 6rem;
+    padding: 1rem;
+
+
+
+}
+
+
+/*--------------H1------------*/
+h1 {
+    white-space: nowrap;
+}
+
+h1{
+    align-self: center;
+    margin-block-end: 18rem ;
 }
