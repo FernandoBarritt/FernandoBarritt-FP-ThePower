@@ -352,3 +352,92 @@ h2::after {
     font-size: 1.2rem;
     margin-top: auto; /* empuja el título hacia abajo si la tarjeta crece */
 }
+
+
+
+/*-----------------------------------------------Curriculum-------------------------------------------------------------------------*/
+
+
+#curriculum {
+    padding: 4rem 2rem;
+    background-color: var(--color-fondo);
+}
+
+#curriculum h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+#curriculum h3 {
+    color: var(--color-principal);
+    font-family: var(--fuente-títulos);
+    font-size: var(--tamaño-h3);
+    text-align: center;
+    margin: 2rem 0 1rem 0;
+}
+
+/* Tabla de educación */
+#curriculum table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    margin: 0 auto;
+}
+
+#curriculum th, #curriculum td {
+    border: 1px solid rgba(72,100,126,0.3);
+    padding: 0.8rem;
+    text-align: left;
+}
+
+#curriculum th {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+}
+
+#curriculum tbody tr:nth-child(even) {
+    background-color: rgba(128,171,235,0.1);
+}
+
+/* Listas de habilidades */
+#curriculum ul {
+    list-style-type: disc;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+
+
+
+/*-----------------------------------------------Sobre mi-------------------------------------------------------------------------*/
+
+#sobre-mi{
+    padding: 4rem 2rem;
+}
+
+.contenedor-sobre-mi {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5rem;
+    flex-wrap: wrap; /*Apilamiento en móvil*/
+}
+
+.texto-sobre-mi {
+    max-width: 40rem;
+    text-align: justify;
+}
+
+#sobre-mi figure{
+    margin: 0;
+    text-align: center;
+
+}
+
+#sobre-mi img{
+    width: 27rem;
+    height: 35rem;
+    border-radius: 7%;
+}
