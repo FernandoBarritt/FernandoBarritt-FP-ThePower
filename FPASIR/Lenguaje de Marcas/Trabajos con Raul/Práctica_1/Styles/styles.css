@@ -479,7 +479,7 @@ h2::after {
 
 #contacto input:focus,
 #contacto textarea:focus {
-    border-color: #0077b6; /* azulito elegante */
+    border-color: #0077b6; 
     outline: none;
 }
 
@@ -520,10 +520,10 @@ h2::after {
 
 /*-----------------------------------------------Cookies-------------------------------------------------------------------------*/
 
-/*-------------------------------------------Popup Cookies-----------------------------------------------------------------*/
+
 
 #aviso-cookies {
-    position: fixed; /* Se queda fijo en la pantalla */
+    position: fixed; 
     bottom: 0;
     left: 0;
     width: 100%;
@@ -570,22 +570,22 @@ h2::after {
     transition: background-color 0.3s;
 }
 
-#accept-cookies {
+#aceptar-cookies {
     background-color: var(--color-principal);
     color: var(--color-blanco);
 }
 
-#accept-cookies:hover {
-    background-color: #a0c3ff; /* Un tono más claro del principal */
+#aceptar-cookies:hover {
+    background-color: #a0c3ff; 
 }
 
-#deny-cookies {
+#rechazar-cookies {
     background-color: transparent;
     border: 2px solid var(--color-principal);
     color: var(--color-principal);
 }
 
-#deny-cookies:hover {
+#rechazar-cookies:hover {
     background-color: var(--color-principal);
     color: var(--color-blanco);
 }
