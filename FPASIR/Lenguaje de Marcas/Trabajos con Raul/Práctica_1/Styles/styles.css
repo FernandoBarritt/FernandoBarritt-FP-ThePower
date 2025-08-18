@@ -441,3 +441,151 @@ h2::after {
     height: 35rem;
     border-radius: 7%;
 }
+
+/*-----------------------------------------------Contacto-------------------------------------------------------------------------*/
+
+#contacto {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+#contacto h2 {
+    margin-bottom: 2rem;
+}
+
+#contacto form {
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#contacto label {
+    text-align: left;
+    font-weight: bold;
+}
+
+#contacto input,
+#contacto textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+#contacto input:focus,
+#contacto textarea:focus {
+    border-color: #0077b6; /* azulito elegante */
+    outline: none;
+}
+
+#contacto button {
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #023e8a;;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contacto button:hover {
+    background-color: var(--color-principal);
+}
+
+#contacto ul {
+    list-style: none;
+    padding: 0;
+}
+
+#contacto ul li {
+    margin: 0.5rem 0;
+}
+
+#contacto ul a {
+    color: #0077b6;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#contacto ul a:hover {
+    color: #023e8a;
+}
+
+
+/*-----------------------------------------------Cookies-------------------------------------------------------------------------*/
+
+/*-------------------------------------------Popup Cookies-----------------------------------------------------------------*/
+
+#aviso-cookies {
+    position: fixed; /* Se queda fijo en la pantalla */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-texto);
+    color: var(--color-blanco);
+    padding: 1.5rem;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    
+    transform: translateY(100%); /* Empieza oculto abajo */
+    transition: transform 0.5s ease-in-out;
+    z-index: 2000;
+}
+
+#aviso-cookies.activo {
+    transform: translateY(0); /* Se muestra al añadir la clase 'activo' */
+}
+
+#aviso-cookies p {
+    margin: 0;
+}
+
+#aviso-cookies a {
+    color: var(--color-principal);
+    text-decoration: underline;
+}
+
+#aviso-cookies .botones-cookies {
+    display: flex;
+    gap: 1rem;
+}
+
+#aviso-cookies button {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: var(--fuente-títulos);
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+#accept-cookies {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+}
+
+#accept-cookies:hover {
+    background-color: #a0c3ff; /* Un tono más claro del principal */
+}
+
+#deny-cookies {
+    background-color: transparent;
+    border: 2px solid var(--color-principal);
+    color: var(--color-principal);
+}
+
+#deny-cookies:hover {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+}
