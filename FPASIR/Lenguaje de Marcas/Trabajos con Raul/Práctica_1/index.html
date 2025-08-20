@@ -14,7 +14,9 @@
 <body>
     
     <header id = "header">
-        <h1>Fernando Barritt Haines</h1>
+        <div 
+        class="contenedor-h1"><h1>Fernando Barritt Haines</h1>
+        </div>
         <button id="boton-nav" aria-controls="nav-principal" aria-expanded="false" aria-label="Abrir menú">☰</button>
     
     </header>
@@ -188,7 +190,7 @@
                 <label for="mensaje">Mensaje:</label>
                     <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
 
-                <button type="submit">Enviar</button>
+                <button type="submit" aria-label="Enviar mensaje">Enviar</button>
             </form>
 
             <ul>
@@ -200,12 +202,12 @@
     </main>
     
 <div id="aviso-cookies" role="dialog" aria-label="Aviso de cookies" aria-describedby="texto-cookies">
-    <p id="texto-cookies">Usamos cookies para mejorar tu experiencia en nuestra web. Consulta nuestra <a href="#politica-privacidad">Política de privacidad</a>.</p>
+    <p id="texto-cookies">Usamos cookies para mejorar tu experiencia en nuestra web. Consulta nuestra <a href="privacidad.html">Política de privacidad</a>.</p>
     <div class="botones-cookies">
         <button id="aceptar-cookies">Aceptar</button>
         <button id="rechazar-cookies">Rechazar</button>
     </div>
 </div>
-<script src="scripts/main.js"> defer </script>
+<script src="scripts/main.js"defer></script>
 </body>
 </html>
