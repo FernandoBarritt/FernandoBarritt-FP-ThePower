@@ -145,7 +145,6 @@ header{
     justify-content: center;
     align-items: center;
     text-align: center;
-    z-index: 1;
 
 }
 
@@ -220,7 +219,21 @@ nav a:hover{
     background-color: var(--color-principal);
 }
 
-
+#boton-nav {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.7); 
+    border: 1px solid var(--color-principal);
+    border-radius: 8px; 
+    padding: 0.2rem 0.5rem; 
+    font-size: 1.8rem; 
+    color: var(--color-texto); 
+    cursor: pointer;
+    position: fixed;   
+    top: 1.5rem;
+    right: 1.5rem;
+    z-index: 1100;
+    backdrop-filter: blur(4px); 
+}
 
 /*-----------------------------------------------H2-------------------------------------------------------------------------*/
 h2 {
@@ -406,19 +419,21 @@ h2::after {
 }
 
 .texto-sobre-mi {
+    flex: 1 1 60%; /* Crece(1), Encoge(1), Base del 60% */
     max-width: 60rem;
     text-align: justify;
 }
 
-#sobre-mi figure{
+#sobre-mi figure {
+    flex: 1 1 40%; /* Crece(1), Encoge(1), Base del 40% */
     margin: 0;
     text-align: center;
     flex-shrink: 0;
 }
 
 #sobre-mi img{
-    width: 100%;
-    max-width: 27rem;
+    display: block;
+    max-width: 100%;
     height: auto;
     border-radius: 7%;
 }
@@ -629,8 +644,49 @@ h2::after {
         gap: 2rem;
         flex-wrap: wrap; 
     }
-}
 
+/*Menú Hamburguesa*/
+    
+    /* 1. Muestra el botón de la hamburguesa */
+    #boton-nav {
+        display: block;
+        z-index: 1010;
+    }
+
+    /* 2. Estilos del panel de navegación lateral (oculto por defecto) */
+    #nav-principal {
+        display: block; 
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 280px; 
+        max-width: 80%; 
+        height: 100%;
+        background-color: var(--color-texto);
+        box-shadow: -3px 0 15px rgba(0,0,0,0.25); 
+        
+        /* Empieza fuera de la pantalla (a la derecha) */
+        transform: translateX(100%); 
+        transition: transform 0.4s ease-in-out; /* Animación */
+        
+        padding-top: 5rem; 
+
+        z-index: 1000;
+    }
+
+    /* 3. Muestra la navegación cuando tiene la clase .nav-visible */
+    #nav-principal.nav-visible {
+        transform: translateX(0); 
+    }
+
+    /* 4. Ajusta la lista de enlaces dentro del panel */
+    #nav-principal ul {
+        flex-direction: column;
+        align-items: flex-start; 
+        gap: 1.5rem;
+        padding: 0 2rem; 
+    }
+}
 
 
 
@@ -664,3 +720,7 @@ h2::after {
         font-size: 0.9rem;
     }
 }
+
+
+
+
