@@ -37,7 +37,18 @@ document.addEventListener('DOMContentLoaded', function() {
         botonnav.addEventListener('click', function() {
             navPrincipal.classList.toggle('nav-visible');
             const esVisible = navPrincipal.classList.contains('nav-visible');
-            botonnav.setAttribute('aria-expanded', esVisible)
+            botonnav.setAttribute('aria-expanded', esVisible);
         })
     }
+
+    const enlacesDelNav = document.querySelectorAll('#nav-principal a');
+
+    enlacesDelNav.forEach(function(enlace) {
+        enlace.addEventListener('click', function() {
+            // Cuando se hace clic en un enlace, se cierra el menú
+            navPrincipal.classList.remove('nav-visible');
+            botonnav.setAttribute('aria-expanded', 'false');
+        });
+    });
+    
 });
