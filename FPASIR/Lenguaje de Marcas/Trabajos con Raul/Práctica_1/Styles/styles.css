@@ -520,6 +520,12 @@ footer ul a:hover {
     color: var(--color-texto); 
 }
 
+footer p{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
 /*-----------------------------------------------Cookies-------------------------------------------------------------------------*/
 
 
