@@ -118,3 +118,10 @@ h3{
 }
 
 
+html{
+    margin: 2rem;
+}
+
+h1{
+    justify-self: center;
+}
