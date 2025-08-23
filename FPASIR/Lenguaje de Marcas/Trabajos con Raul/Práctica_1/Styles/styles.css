@@ -686,6 +686,14 @@ footer p{
         z-index: 1000;
     }
 
+/*  5. FOOTER:  */
+
+    footer ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
     /* 3. Muestra la navegación cuando tiene la clase .nav-visible */
     #nav-principal.nav-visible {
         transform: translateX(0); 
@@ -731,8 +739,14 @@ footer p{
     #contacto input, #contacto textarea, #contacto button {
         font-size: 0.9rem;
     }
-}
 
+    /*  5. FOOTER:  */
+
+    footer {
+        font-size: 0.9rem;
+    }
+
+}
 
 
 
